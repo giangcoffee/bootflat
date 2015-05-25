@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootflat.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        body{
+            background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+            padding:50px;
+        }
+
+        #login-dp{
+            min-width: 250px;
+            padding: 14px 14px 0;
+            overflow:hidden;
+            background-color:rgba(255,255,255,.8);
+        }
+        #login-dp .help-block{
+            font-size:12px
+        }
+        #login-dp .bottom{
+            background-color:rgba(255,255,255,.8);
+            border-top:1px solid #ddd;
+            clear:both;
+            padding:14px;
+        }
+        #login-dp .social-buttons{
+            margin:12px 0
+        }
+        #login-dp .social-buttons a{
+            width: 49%;
+        }
+        #login-dp .form-group {
+            margin-bottom: 10px;
+        }
+        .btn-fb{
+            color: #fff;
+            background-color:#3b5998;
+        }
+        .btn-fb:hover{
+            color: #fff;
+            background-color:#496ebc
+        }
+        .btn-tw{
+            color: #fff;
+            background-color:#55acee;
+        }
+        .btn-tw:hover{
+            color: #fff;
+            background-color:#59b5fa;
+        }
+        @media(max-width:768px){
+            #login-dp{
+                background-color: inherit;
+                color: #fff;
+            }
+            #login-dp .bottom{
+                background-color: inherit;
+                border-top:0 none;
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #f1f2f6;">
+    <header>
+        <nav class="navbar navbar-default navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Login dropdown</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><p class="navbar-text">Already have an account?</p></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                            <ul id="login-dp" class="dropdown-menu">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            Login via
+                                            <div class="social-buttons">
+                                                <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                            </div>
+                                            or
+                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                    <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> keep me logged-in
+                                                    </label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="bottom text-center">
+                                            New here ? <a href="#"><b>Join Us</b></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </header>
+    <div class="container">
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placekitten.com/150/150">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Receta 1</h4>
+                    <p class="text-right">By Francisco</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.</p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                        <li>|</li>
+                        <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                        <li>|</li>
+                        <li>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                            <span><i class="fa fa-facebook-square"></i></span>
+                            <span><i class="fa fa-twitter-square"></i></span>
+                            <span><i class="fa fa-google-plus-square"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="http://placekitten.com/150/150">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Receta 2</h4>
+                    <p class="text-right">By Anailuj</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.</p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                        <li>|</li>
+                        <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                        <li>|</li>
+                        <li>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                            <span><i class="fa fa-facebook-square"></i></span>
+                            <span><i class="fa fa-twitter-square"></i></span>
+                            <span><i class="fa fa-google-plus-square"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" />Bootflat</a></div>
+                    <dl class="footer-nav">
+                        <dt class="nav-title">PORTFOLIO</dt>
+                        <dd class="nav-item"><a href="#">Web Design</a></dd>
+                        <dd class="nav-item"><a href="#">Branding &amp; Identity</a></dd>
+                        <dd class="nav-item"><a href="#">Mobile Design</a></dd>
+                        <dd class="nav-item"><a href="#">Print</a></dd>
+                        <dd class="nav-item"><a href="#">User Interface</a></dd>
+                    </dl>
+                    <dl class="footer-nav">
+                        <dt class="nav-title">ABOUT</dt>
+                        <dd class="nav-item"><a href="#">The Company</a></dd>
+                        <dd class="nav-item"><a href="#">History</a></dd>
+                        <dd class="nav-item"><a href="#">Vision</a></dd>
+                    </dl>
+                    <dl class="footer-nav">
+                        <dt class="nav-title">GALLERY</dt>
+                        <dd class="nav-item"><a href="#">Flickr</a></dd>
+                        <dd class="nav-item"><a href="#">Picasa</a></dd>
+                        <dd class="nav-item"><a href="#">iStockPhoto</a></dd>
+                        <dd class="nav-item"><a href="#">PhotoDune</a></dd>
+                    </dl>
+                    <dl class="footer-nav">
+                        <dt class="nav-title">CONTACT</dt>
+                        <dd class="nav-item"><a href="#">Basic Info</a></dd>
+                        <dd class="nav-item"><a href="#">Map</a></dd>
+                        <dd class="nav-item"><a href="#">Conctact Form</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-copyright text-center">Copyright &copy; 2014 Flathemes.All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
