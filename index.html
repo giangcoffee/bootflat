@@ -7,12 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootflat.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,10 +20,13 @@
     <![endif]-->
     <style>
         body{
-            background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/10/21/20181/cad2441dd3252cf53f12154412286ba0.jpg');
+
             padding:50px;
         }
 
+        .border {
+            outline: 1px solid rosybrown;
+        }
         #login-dp{
             min-width: 250px;
             padding: 14px 14px 0;
@@ -79,8 +80,7 @@
     </style>
 </head>
 <body style="background-color: #f1f2f6;">
-    <header>
-        <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -162,12 +162,17 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-    </header>
+
     <div class="container">
-        <div class="well">
+        <div class="row">
+
+        </div>
+        <div class="row">
+            <div class="col-sm-9 border">
+                <div class="well">
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img class="media-object" src="http://placekitten.com/150/150">
+                    <img class="media-object" src="img/photo-1.jpg">
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">Receta 1</h4>
@@ -199,10 +204,10 @@
                 </div>
             </div>
         </div>
-        <div class="well">
+                <div class="well">
             <div class="media">
                 <a class="pull-left" href="#">
-                    <img class="media-object" src="http://placekitten.com/150/150">
+                    <img class="media-object" src="img/photo-2.jpg">
                 </a>
                 <div class="media-body">
                     <h4 class="media-heading">Receta 2</h4>
@@ -234,8 +239,94 @@
                 </div>
             </div>
         </div>
+                <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/photo-3.jpg">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Receta 2</h4>
+                    <p class="text-right">By Anailuj</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.</p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                        <li>|</li>
+                        <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                        <li>|</li>
+                        <li>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                            <span><i class="fa fa-facebook-square"></i></span>
+                            <span><i class="fa fa-twitter-square"></i></span>
+                            <span><i class="fa fa-google-plus-square"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="well">
+            <div class="media">
+                <a class="pull-left" href="#">
+                    <img class="media-object" src="img/photo-4.jpg">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Receta 2</h4>
+                    <p class="text-right">By Anailuj</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+                        Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+                        dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+                        Aliquam in felis sit amet augue.</p>
+                    <ul class="list-inline list-unstyled">
+                        <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+                        <li>|</li>
+                        <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+                        <li>|</li>
+                        <li>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+                            <span><i class="fa fa-facebook-square"></i></span>
+                            <span><i class="fa fa-twitter-square"></i></span>
+                            <span><i class="fa fa-google-plus-square"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+                <ul class="pagination pull-right">
+                  <li class="active"><a href="#">PREV</a></li>
+                  <li><a href="#">1</a></li>
+                  <li class="active"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li class="disabled"><a href="#">5</a></li>
+                  <li class="active"><a href="#">NEXT</a></li>
+            </ul>
+            </div>
+            <div class="col-sm-3">
+              <h1>Header1</h1>
+              <h1>Header1</h1>
+              <h1>Header1</h1>
+            </div>
+        </div>
     </div>
-    <footer>
+        <!-- footer -->
         <div class="footer">
             <div class="container">
                 <div class="clearfix">
@@ -271,7 +362,7 @@
                 <div class="footer-copyright text-center">Copyright &copy; 2014 Flathemes.All rights reserved.</div>
             </div>
         </div>
-    </footer>
+        <!-- end footer -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
