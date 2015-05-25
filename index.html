@@ -7,10 +7,10 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/bootflat.css">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -76,6 +76,34 @@
                 background-color: inherit;
                 border-top:0 none;
             }
+        }
+
+        #social:hover {
+            -webkit-transform:scale(1.1);
+            -moz-transform:scale(1.1);
+            -o-transform:scale(1.1);
+        }
+        #social {
+            -webkit-transform:scale(0.8);
+            /* Browser Variations: */
+            -moz-transform:scale(0.8);
+            -o-transform:scale(0.8);
+            -webkit-transition-duration: 0.5s;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+        }
+
+        .social-fb:hover {
+            color: #3B5998;
+        }
+        .social-tw:hover {
+            color: #4099FF;
+        }
+        .social-gp:hover {
+            color: #d34836;
+        }
+        .social-em:hover {
+            color: #f39c12;
         }
     </style>
 </head>
@@ -319,7 +347,7 @@
                   <li class="active"><a href="#">NEXT</a></li>
             </ul>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-3 sidebar">
               <h1>Header1</h1>
               <h1>Header1</h1>
               <h1>Header1</h1>
@@ -359,7 +387,18 @@
                         <dd class="nav-item"><a href="#">Conctact Form</a></dd>
                     </dl>
                 </div>
-                <div class="footer-copyright text-center">Copyright &copy; 2014 Flathemes.All rights reserved.</div>
+                <div class="row">
+                    <div class="col-sm-6 pull-left">Copyright &copy; 2014 Flathemes.All rights reserved.</div>
+                    <div class="col-sm-6 pull-right">
+                        <div class="text-center center-block">
+                        <a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+                        <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+                        <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+                        <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+                    </div>
+                    </div>
+
+                </div>
             </div>
         </div>
         <!-- end footer -->
