@@ -231,9 +231,37 @@
             padding-top:40px;
         }
 
+        .thumbnail {
+    padding:0px;
+}
+.panel {
+	position:relative;
+}
+.panel>.panel-heading:after,.panel>.panel-heading:before{
+	position:absolute;
+	top:11px;left:-16px;
+	right:100%;
+	width:0;
+	height:0;
+	display:block;
+	content:" ";
+	border-color:transparent;
+	border-style:solid solid outset;
+	pointer-events:none;
+}
+.panel>.panel-heading:after{
+	border-width:7px;
+	border-right-color:#f7f7f7;
+	margin-top:1px;
+	margin-left:2px;
+}
+.panel>.panel-heading:before{
+	border-right-color:#ddd;
+	border-width:8px;
+}
     </style>
 </head>
-<body>
+<body ng-app="app" >
         <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -322,249 +350,172 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-
-    <div class="container-fluid vertical-center top-buffer">
+    <div class="container-fluid vertical-center top-buffer" ng-controller="MarkdownModelCtrl">
         <div class="row-fluid">
             <div class="col-sm-9 pad-top-40">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                  <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
-                  <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
-                  <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
-                  <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane active" id="home">
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object img-rounded" src="img/photo-1.jpg">
-                                </a>
+                <h3>
+                    <a href="">Blog Post Template for Bootstrap</a>
+                </h3>
+                <p><i class="fa fa-user"></i> by <a href="">Super User</a> - <a href="">6 days ago </a> - <a href="">5 comments</a>
+                </p>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="thumbnail pull-right" style="width:60%;">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong>Super User</strong> <span class="text-muted">posted 5 days ago</span>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Receta 1</h4>
-                                <p class="text-right">By Francisco</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                                    Aliquam in felis sit amet augue.</p>
-                                <ul class="list-inline list-unstyled">
-                                    <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-                                    <li>|</li>
-                                    <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-                                    <li>|</li>
-                                    <li>
-                                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                                        <a href=""><span><i class="fa fa-facebook-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-twitter-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-google-plus-square"></i></span></a>
-                                    </li>
-                                </ul>
-                                <p><i class="fa fa-tags"></i> Tags: <a href=""><span class="badge badge-info">Bootstrap</span></a> <a href=""><span class="badge badge-info">Web</span></a> <a href=""><span class="badge badge-info">CSS</span></a> <a href=""><span class="badge badge-info">HTML</span></a></p>
+                            <div class="panel-body">
+                            <markdown>
+                                Hi,
+                                ```
+                                class RedisManager{
+                                    }
+                                    object RedisManager {
+                                      val redis = Redis(host, port, password)
+                                      redis.select(db);
+
+                                      def get(key:String) : Promise[String] = {
+                                          Promise.wrap(
+                                            redis.get(key).map {
+                                              result => result.orNull
+                                            }
+                                          )
+                                      }
+                                    }
+                                ```
+                                -Hoang Long
+                            </markdown>
                             </div>
                         </div>
 
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object img-rounded" src="img/photo-2.jpg">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Receta 2</h4>
-                                <p class="text-right">By Anailuj</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                                    Aliquam in felis sit amet augue.</p>
-                                <ul class="list-inline list-unstyled">
-                                    <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-                                    <li>|</li>
-                                    <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-                                    <li>|</li>
-                                    <li>
-                                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                                        <a href=""><span><i class="fa fa-facebook-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-twitter-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-google-plus-square"></i></span></a>
-                                    </li>
-                                </ul>
-                                <p><i class="fa fa-tags"></i> Tags: <a href=""><span class="badge badge-info">Bootstrap</span></a> <a href=""><span class="badge badge-info">Web</span></a> <a href=""><span class="badge badge-info">CSS</span></a> <a href=""><span class="badge badge-info">HTML</span></a></p>
-                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="thumbnail pull-right" style="width:40%;">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                         </div>
-
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object img-rounded" src="img/photo-3.jpg">
-                                </a>
+                    </div>
+                    <div class="col-sm-10">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong>jastice</strong> <span class="text-muted">posted 6 days ago</span>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Receta 2</h4>
-                                <p class="text-right">By Anailuj</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                                    Aliquam in felis sit amet augue.</p>
-                                <ul class="list-inline list-unstyled">
-                                    <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-                                    <li>|</li>
-                                    <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-                                    <li>|</li>
-                                    <li>
-                                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                                        <a href=""><span><i class="fa fa-facebook-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-twitter-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-google-plus-square"></i></span></a>
-                                    </li>
-                                </ul>
-                                <p>
-                                    <i class="fa fa-tags"></i> Tags:
-                                    <a href="">
-                                        <span class="badge badge-info">Bootstrap</span>
-                                    </a>
-                                    <a href="">
-                                        <span class="badge badge-info">Web</span>
-                                    </a>
-                                    <a href="">
-                                        <span class="badge badge-info">CSS</span>
-                                    </a>
-                                    <a href="">
-                                        <span class="badge badge-info">HTML</span>
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-left">
-                                <a href="#">
-                                    <img class="media-object img-rounded" src="img/photo-4.jpg">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Receta 2</h4>
-                                <p class="text-right">By Anailuj</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                                    Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                                    dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                                    Aliquam in felis sit amet augue.</p>
-                                <ul class="list-inline list-unstyled">
-                                    <li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-                                    <li>|</li>
-                                    <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-                                    <li>|</li>
-                                    <li>
-                                        <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
-                                        <a href=""><span><i class="fa fa-facebook-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-twitter-square"></i></span></a>
-                                        <a href=""><span><i class="fa fa-google-plus-square"></i></span></a>
-                                    </li>
-                                </ul>
-                                <p>
-                                    <i class="fa fa-tags"></i> Tags:
-                                    <a href="">
-                                        <span class="badge badge-info">Bootstrap</span>
-                                    </a>
-                                    <a href="">
-                                        <span class="badge badge-info">Web</span>
-                                    </a>
-                                    <a href="">
-                                        <span class="badge badge-info">CSS</span>
-                                    </a>
-                                    <a href="">
-                                        <span class="badge badge-info">HTML</span>
-                                    </a>
-                                </p>
+                            <div class="panel-body">
+                            <p>
+                                About Cluster: Please try my fork at https://github.com/1and1/scredis/tree/cluster
+    It has a working cluster implementation, but is still a little rough and I would appreciate feedback about anything not working correctly.
+                            </p>
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane" id="profile">
-                        <div class="timeline">
-                            <div class="line text-muted"></div>
-                            <div class="separator text-muted">
-                                <time>26. 3. 2015</time>
-                            </div>
-                            <article class="panel panel-danger panel-outline">
-                                <div class="panel-heading icon">
-                                    <i class="glyphicon glyphicon-heart"></i>
-                                </div>
-                                <div class="panel-body">
-                                    <strong>Someone</strong> favourited your photo.
-                                </div>
-                            </article>
-                            <article class="panel panel-default panel-outline">
-                                <div class="panel-heading icon">
-                                    <i class="glyphicon glyphicon-picture"></i>
-                                </div>
-                                <div class="panel-body">
-                                    <img class="img-responsive img-rounded" src="//placehold.it/350x150" />
-                                </div>
-                            </article>
-                            <article class="panel panel-primary">
-                                <div class="panel-heading icon">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                                </div>
-                                <div class="panel-heading">
-                                    <h2 class="panel-title">New content added</h2>
-                                </div>
-                                <div class="panel-body">
-                                    Some new content has been added.
-                                </div>
-                                <div class="panel-footer">
-                                    <small>Footer is also supported!</small>
-                                </div>
-                            </article>
-                            <div class="separator text-muted">
-                                <time>25. 3. 2015</time>
-                            </div>
-                            <article class="panel panel-success">
-                                <div class="panel-heading icon">
-                                    <i class="glyphicon glyphicon-plus"></i>
-                                </div>
-                                <div class="panel-heading">
-                                    <h2 class="panel-title">New content added</h2>
-                                </div>
-                                <div class="panel-body">
-                                    Anything you can do with <code>.panel</code>, can be done in timeline too!
-                                </div>
-                                <ul class="list-group">
-                                    <li class="list-group-item">Like</li>
-                                    <li class="list-group-item">list</li>
-                                    <li class="list-group-item">groups</li>
-                                    <li class="list-group-item">and</li>
-                                    <li class="list-group-item">tables</li>
-                                </ul>
-                            </article>
-                            <article class="panel panel-info panel-outline">
-                                <div class="panel-heading icon">
-                                    <i class="glyphicon glyphicon-info-sign"></i>
-                                </div>
-                                <div class="panel-body">
-                                    That is all.
-                                </div>
-                            </article>
-
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="thumbnail pull-right" style="width:40%;">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
                         </div>
                     </div>
-                  <div class="tab-pane" id="messages">...</div>
-                  <div class="tab-pane" id="settings">...</div>
-                  <ul class="pagination pull-right">
-                      <li class="active"><a href="#">PREV</a></li>
-                      <li><a href="#">1</a></li>
-                      <li class="active"><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">4</a></li>
-                      <li class="disabled"><a href="#">5</a></li>
-                      <li class="active"><a href="#">NEXT</a></li>
-                  </ul>
+                    <div class="col-sm-10">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong>Super User</strong> <span class="text-muted">posted 5 days ago</span>
+                            </div>
+                            <div class="panel-body">
+                            <p>
+                                Hi,
+
+                                I am not sure how i could check if current redis connection is still connected. Could you tell me some idea to have this feature?
+
+                                I do this because i need to pickup other redis instances instead of the failed one.
+
+                                I hope this tool will support cluster soon.
+
+                                thank you,
+
+                                -Hoang Long
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="thumbnail pull-right" style="width:40%;">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong>Super User</strong> <span class="text-muted">posted 5 days ago</span>
+                            </div>
+                            <div class="panel-body">
+                            <markdown>
+                                # Hello World!
+                                `angularJs` is a superheroic MVVM framework
+                                As Kanye West said:
+
+                                > We're living the future so
+                                > the present is our past.
+                                First Header | Second Header
+                                ------------ | -------------
+                                Content from cell 1 | Content from cell 2
+                                Content in the first column | Content in the second column
+                            </markdown>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="thumbnail pull-right" style="width:40%;">
+                            <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-10">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                                &nbsp;
+                            </div>
+                            <div class="panel-body">
+                                <div style="margin-top:-50px;">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                      <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                                      <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="home">
+                                            <textarea ng-model="markdownText"></textarea>
+
+                                        </div>
+                                        <div class="tab-pane" id="profile">
+                                            <markdown markdown-model="markdownText"></markdown>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <button type="button" class="btn btn-success pull-right">Comment</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-3 pull-right">
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
                 <div class="list-group">
                     <a href="#" class="list-group-item active"><span class="badge">14</span>C#</a>
                     <a href="#" class="list-group-item"><span class="badge">14</span>Java</a>
@@ -576,8 +527,8 @@
             </div>
         </div>
     </div>
-        <hr/>
-        <!-- footer -->
+        <hr>
+     <!-- footer -->
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="col-sm-4">
@@ -641,5 +592,19 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script src="js/angular.js"></script>
+  <script src="js/angular-sanitize.js"></script>
+  <script src="js/angular-route.js"></script>
+  <script src="js/showdown.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/google-prettify.js"></script>
+  <script src="js/twitter.js"></script>
+
+
+  <script src="js/angular-markdown-text.js"></script>
+  <script src="js/angular-logo.js"></script>
+  <script src="js/github-logo.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
